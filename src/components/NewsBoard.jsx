@@ -11,7 +11,8 @@ const NewsBoard = ({ category }) => {
             setLoading(true);
             setErrorMsg("");
             try {
-                const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+               const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
+
                 const response = await fetch(url);
 
                 if (!response.ok) {
